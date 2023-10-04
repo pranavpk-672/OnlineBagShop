@@ -229,16 +229,17 @@ function validateDateOfBirth() {
 function validatePhoneNumber() {
     const phoneInput = document.getElementById('phone');
     const phoneError = document.getElementById('phone_error');
-    const phonePattern = /^\d{10}$/; // 10 digits
+    const phonePattern = /^[1-9]\d{9}$/; // Starts with 1-9 and followed by 9 digits
 
     if (phoneInput.value === '') {
         phoneError.textContent = 'Phone Number is required';
     } else if (!phonePattern.test(phoneInput.value)) {
-        phoneError.textContent = 'Phone Number must contain exactly 10 digits with no spaces and only digits are allowed';
+        phoneError.textContent = 'Phone Number must start with a digit from 1 to 9 and contain exactly 10 digits with no spaces';
     } else {
         phoneError.textContent = ''; // Clear any previous error message
     }
 }
+
 
 
     // Function to validate the email

@@ -1,3 +1,4 @@
+
 {% extends 'nav.html' %}
 {% block title %}
 AispaceX Login
@@ -42,6 +43,7 @@ AispaceX Login
     
                     <form action="http://127.0.0.1:8000/myauth/login/" method="POST" id="Login-form">
                         {% csrf_token %}
+                        <br>
                        
                         <!-- Email with spacing -->
                         <div class="form-group">
@@ -61,7 +63,7 @@ AispaceX Login
                     <div class="mt-3 text-center">
                         <hr>
                         Not Already a user? <a href="/myauth/signup/">SignUp</a><br>
-                        <span>Forget Password? <a href="/">Reset</a></span>
+                        <span>Forget Password? <a href="{% url 'password_reset' %}">Reset</a></span>
                     </div>
                 </div>
             </div>

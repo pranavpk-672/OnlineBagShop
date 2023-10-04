@@ -1,7 +1,10 @@
+
 from django.shortcuts import render, HttpResponse, redirect
 from .models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
+
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -48,9 +51,17 @@ def handlelogin(request):
 
         if myuser is not None:
                 login(request,myuser)
+                #request.session['email']=myuser.email
+
+                #session
+                request.session['username']=username
+
+
+
+
                 if myuser.role=='CUSTOMER':
                         #messages.success(request,"Login Sucess!!!")
-                        return render(request,'home.html')
+                        return redirect('home')
                 elif myuser.role=='DELIVERYBOY':
                         messages.success(request,"Login Sucess!!!")
                         return HttpResponse("seller login")
@@ -59,9 +70,14 @@ def handlelogin(request):
                           return HttpResponse("Admin login ")
                           
         else:
-                   messages.error(request,"Some thing went wrong")
-                   return redirect('/myauth/login')
-    return render(request,'auth/login.html')
+                messages.error(request,"Invalid credential")
+                return redirect('/myauth/login')
+    #return render(request,'auth/login.html')
+
+   #session
+    response = render(request,'auth/login.html')
+    response['Cache-Control'] = 'no-store,must-revalidate'
+    return response
 
 
 #delivery signup
@@ -75,4 +91,16 @@ def handlelogout(request):
     logout(request)
     messages.success(request,"Logout Success")
     return redirect('/myauth/login')
+
+
+login_required
+def home(request):
+      
+      if 'username' in request.session:
+        response = render(request,'home.html')
+        response['Cache-Control'] = 'no-store,must-revalidate'
+        return response
+      else:
+        return redirect('/myauth/login')
+        #return render(request,'home.html')
 

@@ -70,22 +70,31 @@ https://templatemo.com/tm-559-zay-shop
                             <a class="nav-link" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
+                            <a class="nav-link" href="#about">About</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="shop.html">Shop</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
+                            <a class="nav-link" href="#footer">Contact</a>
+                            <!--<li class="dropdown">
+
+                                <a class="user" href="#">{{ user.username }}</a>
+                                <div class=" user dropdown-content">
+                                    <a href="#">Profile</a>
+                                    <a  href="/myauth/logout/">Logout</a>
+                                    
+                                </div>
+                    </li>-->
+                        <!--</li>
                         <li class="nav-item">
                             <a class="nav-link" href="/myauth/logout/">Logout</a>
-                        </li>
+                        </li>-->
 
-                        <li class="nav-item">
+                        <!--<li class="nav-item">
                             <a class="nav-link" href="contact.html">Welcome{{user.username}}</a>
                             
-                        </li>
+                        </li>-->
 
                        
                         <li class="nav-item dropdown">
@@ -94,7 +103,7 @@ https://templatemo.com/tm-559-zay-shop
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="/myauth/signup/">Signup</a>
-                                <a class="dropdown-item" href="/myauth/log/">Become a Delivery Boy</a>
+                                <!--<a class="dropdown-item" href="/myauth/log/">Become a Delivery Boy</a>-->
                                 <a class="dropdown-item" href="/myauth/login/">Login</a>
                             </div>
                         </li>
@@ -276,7 +285,7 @@ https://templatemo.com/tm-559-zay-shop
                 </p>
             </div>
             <div class="col-12 col-md-4 p-5 mt-3">
-                <a href="#"><img src="./{% static 'assets/img/a.jpg' %}" class="rounded-circle img-fluid border"></a>
+                <a href="#"><img src="./{% static 'assets/img/b.jpg' %}" class="rounded-circle img-fluid border"></a>
                 <h2 class="h5 text-center mt-3 mb-3">WOMEN</h2>
                 <p class="text-center"><a class="btn btn-success">Go Shop</a></p>
                 <p> Elevate your style with our exquisite range of women's bags. From elegant handbags to chic totes, our collection is designed to complement every outfit and occasion. Crafted with attention to detail and featuring a variety of colors and textures,
@@ -285,7 +294,7 @@ https://templatemo.com/tm-559-zay-shop
                 </p>
             </div>
             <div class="col-12 col-md-4 p-5 mt-3">
-                <a href="#"><img src="./{% static 'assets/img/b.jpg' %}" class="rounded-circle img-fluid border"></a>
+                <a href="#"><img src="./{% static 'assets/img/a.jpg' %}" class="rounded-circle img-fluid border"></a>
                 <h2 class="h5 text-center mt-3 mb-3">MEN</h2>
                 <p class="text-center"><a class="btn btn-success">Go Shop</a></p>
                 <p> Explore our sophisticated collection of men's bags that cater to the modern gentleman's needs. Whether you're heading to the office, going on a weekend getaway, or hitting the gym, we have a bag to suit your lifestyle. With sturdy materials and sleek designs,
@@ -313,7 +322,7 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="col-12 col-md-4 mb-4">
                     <div class="card h-100">
                         <a href="shop-single.html">
-                            <img src="./{% static 'assets/img/aa.jpg' %}" class="card-img-top" alt="...">
+                            <img src="./{% static 'assets/img/bag23.jpg' %}" class="card-img-top" alt="...">
                         </a>
                         <div class="card-body">
                             <ul class="list-unstyled d-flex justify-content-between">
@@ -510,8 +519,8 @@ https://templatemo.com/tm-559-zay-shop
       </section><!-- End Clients Section -->
       
 
-
-      <section id="about" class="about section-bg">
+<!--aboutsession-->
+      <section id="about" class="about">
         <div class="container" data-aos="fade-up">
   
           <div class="section-title">
@@ -523,6 +532,7 @@ https://templatemo.com/tm-559-zay-shop
           <div class="row">
             <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
               <img src="./{% static 'assets/img/add.jpg' %}" class="img-fluid" alt="">
+              <br><br>
               
             </div>
             <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
@@ -564,7 +574,7 @@ https://templatemo.com/tm-559-zay-shop
       
 
     <!-- Start Footer -->
-    <footer class="bg-dark" id="tempaltemo_footer">
+    <footer class="bg-dark" id="footer">
         <div class="container">
             <div class="row">
 
@@ -603,10 +613,10 @@ https://templatemo.com/tm-559-zay-shop
                     <h2 class="h2 text-light border-bottom pb-3 border-light">Further Info</h2>
                     <ul class="list-unstyled text-light footer-link-list">
                         <li><a class="text-decoration-none" href="#">Home</a></li>
-                        <li><a class="text-decoration-none" href="#">About Us</a></li>
-                        <li><a class="text-decoration-none" href="#">Shop Locations</a></li>
-                        <li><a class="text-decoration-none" href="#">FAQs</a></li>
-                        <li><a class="text-decoration-none" href="#">Contact</a></li>
+                        <li><a class="text-decoration-none" href="#about">About Us</a></li>
+                        <li><a class="text-decoration-none" href="#contact">Shop Locations</a></li>
+                        <!--<li><a class="text-decoration-none" href="#">FAQs</a></li>-->
+                        <li><a class="text-decoration-none" href="#contact">Contact</a></li>
                     </ul>
                 </div>
 
