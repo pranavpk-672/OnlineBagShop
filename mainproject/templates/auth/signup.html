@@ -88,7 +88,7 @@ AispaceX
 </div>
 <!-- Your HTML code -->
 
-<!-- Add this script section at the end of your HTML body -->
+
 <script>
   
 // Function to validate the first name
@@ -107,6 +107,11 @@ function validateFirstName() {
         firstNameError.textContent = ''; // Clear any previous error message
     }
 }
+
+
+
+
+
 
 
 // Function to validate the last name
@@ -129,7 +134,6 @@ function validateLastName() {
 
 
 
-
 // Function to validate the email
 function validateEmail() {
     const emailInput = document.getElementById('email');
@@ -140,6 +144,8 @@ function validateEmail() {
         emailError.textContent = 'Email is required';
     } else if (!emailPattern.test(emailInput.value)) {
         emailError.textContent = 'Invalid email format';
+    } else if (emailInput.value.includes('..')) {
+        emailError.textContent = 'Consecutive dots are not allowed in the email';
     } else {
         // Check if the email already exists (you'll need to implement this logic on your server)
         // Here, we assume a function 'checkEmailExists' that checks if the email exists
@@ -153,11 +159,11 @@ function validateEmail() {
 
 // Example function to check if the email exists (you'll need to implement this)
 function checkEmailExists(email) {
-    // You should make an AJAX request to your server to check if the email exists in your database
-    // This is just a mock example
+    
     const existingEmails = ['example@email.com', 'another@example.com'];
     return existingEmails.includes(email);
 }
+
 
 
 
@@ -180,26 +186,51 @@ function validatePassword() {
 
 
 
+
+    
+
+
     // Function to validate the confirm password
-    function validateConfirmPassword() {
-        const passwordInput = document.getElementById('password');
-        const confirmPasswordInput = document.getElementById('confirm_password');
-        const confirmPasswordError = document.getElementById('confirm_password_error');
+function validateConfirmPassword() {
+    const passwordInput = document.getElementById('password');
+    const confirmPasswordInput = document.getElementById('confirm_password');
+    const confirmPasswordError = document.getElementById('confirm_password_error');
 
-        if (confirmPasswordInput.value !== passwordInput.value) {
-            confirmPasswordError.textContent = 'Passwords do not match';
-        } else {
-            confirmPasswordError.textContent = ''; 
-        }
+    if (confirmPasswordInput.value !== passwordInput.value) {
+        confirmPasswordError.textContent = 'Passwords do not match';
+    } else {
+        confirmPasswordError.textContent = ''; 
     }
+}
 
-    // Add event listeners to trigger validation on input change
-    document.getElementById('first_name').addEventListener('input', validateFirstName);
-    document.getElementById('last_name').addEventListener('input', validateLastName);
-    document.getElementById('email').addEventListener('input', validateEmail);
-    document.getElementById('password').addEventListener('input', validatePassword);
-    document.getElementById('confirm_password').addEventListener('input', validateConfirmPassword);
+// Add event listeners to trigger validation on input change
+document.getElementById('first_name').addEventListener('input', validateFirstName);
+document.getElementById('last_name').addEventListener('input', validateLastName);
+document.getElementById('email').addEventListener('input', validateEmail);
+document.getElementById('password').addEventListener('input', validatePassword);
+document.getElementById('confirm_password').addEventListener('input', validateConfirmPassword);
 
+// Function to handle form submission
+function submitForm(e) {
+    const firstNameError = document.getElementById('first_name_error');
+    const lastNameError = document.getElementById('last_name_error');
+    const emailError = document.getElementById('email_error');
+    const passwordError = document.getElementById('password_error');
+    const confirmPasswordError = document.getElementById('confirm_password_error');
+
+    if (
+        firstNameError.textContent ||
+        lastNameError.textContent ||
+        emailError.textContent ||
+        passwordError.textContent ||
+        confirmPasswordError.textContent
+    ) {
+        e.preventDefault(); // Prevent form submission if there are errors
+    }
+}
+
+// Event listener for form submission
+document.getElementById('signup-form').addEventListener('submit', submitForm);
 
     
 </script>
@@ -207,3 +238,10 @@ function validatePassword() {
 </html>
 
 {% endblock form %}
+
+
+
+
+
+
+

@@ -1,8 +1,14 @@
+from django.contrib.auth.base_user import AbstractBaseUser
 from django.urls import path
 from myauth import views
 
 
 from django.contrib.auth.views import PasswordResetView,PasswordResetDoneView,PasswordResetConfirmView,PasswordResetCompleteView
+
+
+
+
+
 
 urlpatterns = [
     path('signup/',views.signup,name='signup'),
@@ -10,6 +16,7 @@ urlpatterns = [
     path('logout/',views.handlelogout,name='handlelogout'),
     path('log/',views.log,name='log'),
     path('home/',views.home,name='home'),
+    path('adminreg/',views.adminreg,name='adminreg'),
 
     #forget pass
     #path('request-reset-email/',views.RequestResetEmailView.as_view(),name="request-reset-email"),
@@ -17,7 +24,11 @@ urlpatterns = [
     path('password_reset/', PasswordResetView.as_view(), name='password_reset'),
     path('password_reset/done/', PasswordResetDoneView.as_view(), name='password_reset_done'),
     path('reset/<uidb64>/<token>/', PasswordResetConfirmView.as_view(), name='password_reset_confirm'),
-    path('reset/done/', PasswordResetCompleteView.as_view(), name='password_reset_complete')
+    path('reset/done/', PasswordResetCompleteView.as_view(), name='password_reset_complete'),
     
+
+    #authentication
+
+    path('activate/<uidb64>/<token>',views.ActivateAccountView.as_view(),name='activate')
 
 ]
