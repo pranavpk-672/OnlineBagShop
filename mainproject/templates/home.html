@@ -27,6 +27,8 @@ https://templatemo.com/tm-559-zay-shop
 </head>
 
 <body>
+
+   
     <!-- Start Top Nav -->
     <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
         <div class="container text-light">
@@ -126,12 +128,12 @@ https://templatemo.com/tm-559-zay-shop
                             </div>
                         </div>
                     </div>
-                    <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
+                    <a class="nav-icon d-none d-lg-inline" href="" data-bs-toggle="modal" data-bs-target="#templatemo_search">
                         <i class="fa fa-fw fa-search text-dark mr-2"></i>
                     </a>
-                    <a class="nav-icon position-relative text-decoration-none" href="#">
+                    <a class="nav-icon position-relative text-decoration-none" href="/myauth/cartt/">
                         <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
-                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
+                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"></span>
                     </a>
                    <!-- <li class="nav-item dropdown">
                            
@@ -157,124 +159,184 @@ https://templatemo.com/tm-559-zay-shop
 
 
 
-    <!--demo header-->
-    {% block style %}
+ <!--demo header-->
+ {% block style %}
 
-    <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Header</title>
-    <style>
-        /* Header styles */
-        header {
-            background-color: #2c621d;
-            color: #fff;
-            padding: 10px 0;
-        }
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Website Header</title>
+ <style>
+     /* Header styles */
+     header {
+         background-color: #2c621d;
+         color: #fff;
+         padding: 10px 0;
+     }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+     .container {
+         max-width: 1200px;
+         margin: 0 auto;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+     }
 
-        /* Navigation styles */
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
+     /* Navigation styles */
+     nav ul {
+         list-style: none;
+         margin: 0;
+         padding: 0;
+         display: flex;
+     }
 
-        nav ul li {
-            margin-right: 20px;
-        }
+     nav ul li {
+         margin-right: 20px;
+     }
 
-        nav ul li:last-child {
-            margin-right: 0;
-        }
+     nav ul li:last-child {
+         margin-right: 0;
+     }
 
-        nav a {
-            text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-        
-        }
+     nav a {
+         text-decoration: none;
+         color: #fff;
+         font-weight: bold;
+     
+     }
 
-        /* Dropdown styles */
-        .dropdown {
-            position: relative;
-        }
+     /* Dropdown styles */
+     .dropdown {
+         position: relative;
+     }
 
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #333;
-            min-width: 120px;
-            z-index: 1;
-        }
+     .dropdown-content {
+         display: none;
+         position: absolute;
+         background-color: #333;
+         min-width: 120px;
+         z-index: 1;
+     }
 
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
+     .dropdown:hover .dropdown-content {
+         display: block;
+     }
 
-        .dropdown-content a {
-            padding: 10px;
-            text-align: center;
-            color: #fff;
-            text-decoration: none;
-            display: block;
-        }
+     .dropdown-content a {
+         padding: 10px;
+         text-align: center;
+         color: #fff;
+         text-decoration: none;
+         display: block;
+     }
 
-        .dropdown-content a:hover {
-            background-color: #555;
-        }
-        .user{
-            margin-left: 770px;
-        }
-       
-    </style>
-    {% endblock style %}
-    {% block form %}
+     .dropdown-content a:hover {
+         background-color: #555;
+     }
+     .user{
+         margin-left: 770px;
+     }
+
+     
+     
+ 
+    
+ </style>
+ {% endblock style %}
+ {% block form %}
 </head>
 <body>
-    <header>
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="#">Kids</a></li>
-                    <li><a href="#">Men</a></li>
-                    <li><a href="#">Women</a></li>
-                    <li class="dropdown">
-                        <a href="#">Categories</a>
-                        
+
+
+ 
+ <header>
+
+     
+
+
+     <div class="container">
+        <nav>
+            <ul>
+                <li><a href="http://127.0.0.1:8000/myauth/productallview/">ALL PRODUCTS</a></li>
+               
+                <li class="dropdown">
+                    <a href="#">MEN</a>
+                    <div class="dropdown-content">
+                       <!-- <a href="/brand/nike/">Nike</a>-->
+                        <!-- Add more brand options here -->
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">WOMEN</a>
+                    <div class="dropdown-content">
+                        <!--<a href="/brand/nike/">Nike</a>-->
+                        <!-- Add more brand options here -->
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">KIDS</a>
+                    <div class="dropdown-content">
+                        <!--<a href="/brand/nike/">Nike</a>->
+                        <!-- Add more brand options here -->
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Categories</a>
+                    <div class="dropdown-content">
+                        <a href="/category/kids/">BackPack</a>
+                        <a href="/category/men/">RushSack</a>
+                        <a href="/category/women/">HandBag</a>
+                        <a href="/category/women/">LaptopBag</a>
+                        <a href="/category/women/">DuffleBag</a>
+                        <a href="/category/women/">DuffleTrolley</a>
+                        <a href="/category/women/">TrolleyBag</a>
+                        <a href="/category/women/">BriefCase</a>
+
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Brands</a>
+                    <div class="dropdown-content">
+                        <a href="/brand/nike/">NIKE</a>
+                        <a href="/brand/nike/">ADIDAS</a>
+                        <a href="/brand/nike/">PUMA</a>
+                        <a href="/brand/nike/">WILDCRAFT</a>
+                        <a href="/brand/nike/">SAFARI</a>
+                        <a href="/brand/nike/">MI</a>
+                        <a href="/brand/nike/">ALLEN SOLLY</a>
+                        <a href="/brand/nike/">BURBERRY</a>
+                        <a href="/brand/nike/">TOMMY HILFIGER</a>
+                        <!-- Add more brand options here -->
+                    </div>
+                </li>
+                
+                   
+            </ul>
+            <li class="dropdown">
+                <a class="user" href="#">
+                    {% if user.profile.profile_picture %}
+                        <img src="{{ user.profile.profile_picture.url }}" alt="Profile Picture" style="width: 40px; height: 40px; border-radius: 50%;">
+                    {% else %}
+                        <img src="{% static 'assets/img/pro.png' %}" alt="Default Profile Picture" style="width: 40px; height: 40px; border-radius: 50%;">
+                    {% endif %}
+                    Hello, {{ user.first_name }}
+                </a>
+                <div class="user dropdown-content">
+                    <a href="/myauth/updateprofile/">Profile</a>
+                    <a href="">View Cart</a>
+                    <a href="">View Wishlist</a>
+                    <a href="/myauth/logout/">Logout</a>
+                </div>
+            </li>
+            
+            
+        </nav>
         
-                        <div class="dropdown-content">
-                            <a href="#">Backpack</a>
-                            <!-- Add more category options here -->
-
-                            <li class="dropdown">
-
-                                <a class="user" href="#">{{ user.username }}</a>
-                                <div class=" user dropdown-content">
-                                    <a href="#">Profile</a>
-                                    <a  href="/myauth/logout/">Logout</a>
-                                    
-                                </div>
-                    </li>
-
-
-
-
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <!-- Your page content goes here -->
+     </div>
+ </header>
+ <!-- Your page content goes here -->
 </body>
 </html>
 
@@ -303,120 +365,168 @@ https://templatemo.com/tm-559-zay-shop
 
 
 
-    <!-- Start Banner Hero -->
-    <div id="template-mo-zay-hero-carousel" class="carousel slide" data-bs-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="0" class="active"></li>
-            <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="1"></li>
-            <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="container">
-                    <div class="row p-5">
-                       
-                       <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                            <img src="{% static 'assets/img/q.gif' %}" alt="Animated GIF">
-                        </div>
-                        
-                        
-                       <!--<div class="col-lg-6 mb-0 d-flex align-items-center">
-                            <div class="text-align-left align-self-center">
-                                <h1 class="h1 text-success"><b>BAGGAGE</b> Heaven</h1>
-                                <h3 class="h2">Bags Designed Beyond Imagination</h3>
-                                
-                                <p>
-                                    YOUR BAG SHOULD MAKE YOU FEEL GOOD AND EXPRESS YOUR PERSONALITY.  
-                                    EMBRACE YOUR NOMADIC SELF AND LIFT YOUR SPIRITS WITH A COLOURFUL HANDMADE BAG - STAND OUT IN THE CROWD
-                                     WITH COOL BOHEMIAN VIBES! 
-                                </p>
+        <!-- Start Banner Hero -->
+        <div id="template-mo-zay-hero-carousel" class="carousel slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="1"></li>
+                <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row p-5">
+                            <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+                                <img class="img-fluid" src="{% static 'assets/img/cat2.jpg' %}" alt="">
                             </div>
-                        </div>-->
-
-                        <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                            <img class="img-fluid" src="{% static 'assets/img/p.jpg' %}" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="container">
-                    <div class="row p-5">
-                        <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                            <img class="img-fluid" src="{% static 'assets/img/p.jpg' %}" alt="">
-                        </div>
-                        <div class="col-lg-6 mb-0 d-flex align-items-center">
-                            <div class="text-align-left">
-                                
-                             <!-- <div class="img">
-                                  <h1  class="fw-bold">
-                                        FOUND WHO
-                                         IS<br>
-                                        RIGHT<br> TO 
-                                       <br> TOUCH
-                                        
-                                        YOUR
-                                        <br> SHOULDER 
-                                      </h1>
-                                    </div>
-                <style>
-                .img {
-                   
-                   
-                    
-                    font-weight: bolder;
-                    font-size: 16px;
-                    letter-spacing: 1px;
-                   
-                    color: #189b4a;
-                }
-               .img p{
-                font-size: xx-large !important;
-                font-family: 'Martian Mono', monospace;
-               }
-            </style>-->
-            <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                <img class="img-fluid" src="{% static 'assets/img/qwe.gif' %}" alt="">
-            </div>
-                                <h1 class="h1">BEAUTIFY THE ELAGANCE</h1>
-                                <h3 class="h2">With Quality Bags </h3>
-                                          
-                                     
-                                
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="container">
-                    <div class="row p-5">
-                        <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                            <img class="img-fluid" src="{% static 'assets/img/cat1.jpg' %}" alt="">
-                        </div>
-                        <div class="col-lg-6 mb-0 d-flex align-items-center">
-                            <div class="text-align-left">
-                                <h1 class="h1">Bag Reflecting Your Style..</h1>
-                                <h3 class="h2">Exclusive Collection of Stylish Bags </h3>
-                                <p>
+                            <div class="col-lg-6 mb-0 d-flex align-items-center">
+                                <div class="text-align-left align-self-center">
+                                    <h1 class="h1 text-success"><b>BAGGAGE</b> Heaven</h1>
+                                    <h3 class="h2">Bags Designed Beyond Imagination</h3>
                                     
-                                </p>
+                                    <p>
+                                        YOUR BAG SHOULD MAKE YOU FEEL GOOD AND EXPRESS YOUR PERSONALITY.  
+                                        EMBRACE YOUR NOMADIC SELF AND LIFT YOUR SPIRITS WITH A COLOURFUL HANDMADE BAG - STAND OUT IN THE CROWD
+                                         WITH COOL BOHEMIAN VIBES! 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row p-5">
+                            <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+                                <img class="img-fluid" src="{% static 'assets/img/p.jpg' %}" alt="">
+                            </div>
+                            <div class="col-lg-6 mb-0 d-flex align-items-center">
+                                <div class="text-align-left">
+                                    <div class="img">
+                                      <h1  class="fw-bold">
+                                            FOUND WHO
+                                             IS<br>
+                                            RIGHT<br> TO 
+                                           <br> TOUCH
+                                            
+                                            YOUR
+                                            <br> SHOULDER 
+                                          </h1>
+                                        </div>
+                    <style>
+                    .img {
+                       
+                       
+                        
+                        font-weight: bolder;
+                        font-size: 16px;
+                        letter-spacing: 1px;
+                       
+                        color: #189b4a;
+                    }
+                   .img p{
+                    font-size: xx-large !important;
+                    font-family: 'Martian Mono', monospace;
+                   }
+                </style>
+                                    <h1 class="h1">BEAUTIFY THE ELAGANCE</h1>
+                                    <h3 class="h2">With Quality Bags </h3>
+                                              
+                                         
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row p-5">
+                            <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+                                <img class="img-fluid" src="{% static 'assets/img/cat1.jpg' %}" alt="">
+                            </div>
+                            <div class="col-lg-6 mb-0 d-flex align-items-center">
+                                <div class="text-align-left">
+                                    <h1 class="h1">Bag Reflecting Your Style..</h1>
+                                    <h3 class="h2">Exclusive Collection of Stylish Bags </h3>
+                                    <p>
+                                        
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <a class="carousel-control-prev text-decoration-none w-auto ps-3" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="prev">
+                <i class="fas fa-chevron-left"></i>
+            </a>
+            <a class="carousel-control-next text-decoration-none w-auto pe-3" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="next">
+                <i class="fas fa-chevron-right"></i>
+            </a>
         </div>
-        <a class="carousel-control-prev text-decoration-none w-auto ps-3" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="prev">
-            <i class="fas fa-chevron-left"></i>
-        </a>
-        <a class="carousel-control-next text-decoration-none w-auto pe-3" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="next">
-            <i class="fas fa-chevron-right"></i>
-        </a>
-    </div>
-    <!-- End Banner Hero -->
+        <!-- End Banner Hero -->
 
+
+
+
+        <div class="section">
+            <a href="http://127.0.0.1:8000/myauth/productallview/" class="button">
+                <span class="text">Shop Now</span>
+                <span class="arrow">→</span>
+            </a>
+            <a href="http://127.0.0.1:8000/myauth/productallview/" class="button">
+                <span class="text">Explore More</span>
+                <span class="arrow">→</span>
+            </a>
+        </div>
+        
+        
+        
+        
+        
+        <style>
+
+
+
+        .section {
+            display: flex;
+            justify-content: space-between;
+            background-color: #f0f4ef;
+            padding: 10px 20px;
+            border-radius: 5px; /* Add rounded corners to the section */
+        }
+        
+        .button {
+            text-align: center;
+            background-color: #2c621d; /* Button background color */
+            padding: 10px 20px; /* Button padding */
+            border-radius: 5px; /* Add rounded corners to the buttons */
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+        
+        .button:hover {
+            background-color: #ff3300; /* Change background color on hover */
+        }
+        
+        .text {
+            margin-right: 10px; /* Add space between text and arrow */
+        }
+        
+        .arrow {
+            font-size: 18px; /* Increase arrow size */
+        }
+        
+        /* Add more styles as needed */
+        
+          </style>
+        
+        
 
 
     <!--form-->
@@ -467,8 +577,112 @@ https://templatemo.com/tm-559-zay-shop
     <!-- End Categories of The Month -->
 
 
+    
+
+<section class="bg-light">
+    <div class="container py-5">
+        <div class="row text-center py-3">
+            <div class="col-lg-6 m-auto">
+                <h1 class="h1"></h1>
+                <p>
+                   
+                </p>
+            </div>
+            <style>
+    .head {
+    font-size: 24px; /* Increase font size for emphasis */
+    margin: 10px 0;
+    color: #459a37; /* Set the font color */
+    font-family: 'Your Preferred Font', sans-serif; /* Choose a beautiful font */
+    text-transform: uppercase; /* Convert text to uppercase */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle text shadow */
+    letter-spacing: 2px; /* Adjust letter spacing */
+    line-height: 1.2; /* Adjust line height for readability */
+    text-align: center; /* Center-align the text */
+}
+
+            </style>
+        </div>
+        <div class="row">
+            <div class="head">
+
+            <center><h1 class="h1">FEATURED PRODUCTS</h1></center>
+            </div>
+            <br><br>
+
+
+
+            {% for item in items %}
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card h-100">
+                    <a href="{% url 'prodetailview' item.id %}">
+                        
+                        
+
+                        <img src="{{item.image1.url}}" class="card-img-top" alt="..." style="width: 250px; height: 300px;">
+                    </a>
+                    <div class="card-body">
+                        <ul class="list-unstyled d-flex justify-content-between">
+                            <li>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-muted fa fa-star"></i>
+                                <i class="text-muted fa fa-star"></i>
+                            </li>
+                            <li class="text-muted text-right">₹ {{item.current_price}}</li>
+                        </ul>
+                        <a href="shop-single.html" class="h2 text-decoration-none text-dark">{{item.product_name}}</a>
+                        <p class="card-text">
+                            {{item.about_product}}
+                        </p>
+                        <p class="text-muted">Reviews (24)</p>
+                        <div class="product-actions">
+                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="wishlist">Add to Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+{% endfor %}
+         
+           <style>
+            .product-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+.add-to-cart,
+.wishlist,
+.buy-now-button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.add-to-cart:hover,
+.wishlist:hover,
+.buy-now-button:hover {
+    background-color: #21b721;
+}
+           </style>
+
+        </div>
+    </div>
+
+       
+      <div class="head">
+
+        <center><h1 class="h1">CATEGORIES</h1></center>
+        </div><br><br>
+    
+</section>
     <!-- Start Featured Product -->
-    <section class="bg-light">
+    <!-- <section class="bg-light">
         <div class="container py-5">
             <div class="row text-center py-3">
                 <div class="col-lg-6 m-auto">
@@ -482,7 +696,7 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="col-12 col-md-4 mb-4">
                     <div class="card h-100">
                         <a href="shop-single.html">
-                            <img src="{% static 'assets/img/aa.jpg' %}" class="card-img-top" alt="...">
+                            <img src="{% static 'assets/img/bag24.jpg' %}" class="card-img-top" alt="...">
                         </a>
                         <div class="card-body">
                             <ul class="list-unstyled d-flex justify-content-between">
@@ -607,7 +821,7 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="col-12 col-md-4 mb-4">
                     <div class="card h-100">
                         <a href="shop-single.html">
-                            <img src="./{% static 'assets/img/nn.jpg' %}" class="card-img-top" alt="...">
+                            <img src="./{% static 'assets/img/bag25.jpg' %}" class="card-img-top" alt="...">
                         </a>
                         <div class="card-body">
                             <ul class="list-unstyled d-flex justify-content-between">
@@ -634,7 +848,7 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="col-12 col-md-4 mb-4">
                     <div class="card h-100">
                         <a href="shop-single.html">
-                            <img src="{% static 'assets/img/aa.jpg' %}" class="card-img-top" alt="...">
+                            <img src="{% static 'assets/img/bag24.jpg' %}" class="card-img-top" alt="...">
                         </a>
                         <div class="card-body">
                             <ul class="list-unstyled d-flex justify-content-between">
@@ -662,64 +876,7 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="col-12 col-md-4 mb-4">
                     <div class="card h-100">
                         <a href="shop-single.html">
-                            <img src="{% static 'assets/img/aa.jpg' %}" class="card-img-top" alt="...">
-                        </a>
-                        <div class="card-body">
-                            <ul class="list-unstyled d-flex justify-content-between">
-                                <li>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-muted fa fa-star"></i>
-                                    <i class="text-muted fa fa-star"></i>
-                                </li>
-                                <li class="text-muted text-right">$240.00</li>
-                            </ul>
-                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Gym Weight</a>
-                            <p class="card-text">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa qui officia deserunt.
-                            </p>
-                            <p class="text-muted">Reviews (24)</p>
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-
-                <div class="col-12 col-md-4 mb-4">
-                    <div class="card h-100">
-                        <a href="shop-single.html">
-                            <img src="{% static 'assets/img/aa.jpg' %}" class="card-img-top" alt="...">
-                        </a>
-                        <div class="card-body">
-                            <ul class="list-unstyled d-flex justify-content-between">
-                                <li>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-muted fa fa-star"></i>
-                                    <i class="text-muted fa fa-star"></i>
-                                </li>
-                                <li class="text-muted text-right">$240.00</li>
-                            </ul>
-                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Gym Weight</a>
-                            <p class="card-text">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa qui officia deserunt.
-                            </p>
-                            <p class="text-muted">Reviews (24)</p>
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-                <div class="col-12 col-md-4 mb-4">
-                    <div class="card h-100">
-                        <a href="shop-single.html">
-                            <img src="{% static 'assets/img/aa.jpg' %}" class="card-img-top" alt="...">
+                            <img src="{% static 'assets/img/bag25.jpg' %}" class="card-img-top" alt="...">
                         </a>
                         <div class="card-body">
                             <ul class="list-unstyled d-flex justify-content-between">
@@ -748,7 +905,7 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="col-12 col-md-4 mb-4">
                     <div class="card h-100">
                         <a href="shop-single.html">
-                            <img src="{% static 'assets/img/aa.jpg' %}" class="card-img-top" alt="...">
+                            <img src="{% static 'assets/img/bag24.jpg' %}" class="card-img-top" alt="...">
                         </a>
                         <div class="card-body">
                             <ul class="list-unstyled d-flex justify-content-between">
@@ -776,7 +933,36 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="col-12 col-md-4 mb-4">
                     <div class="card h-100">
                         <a href="shop-single.html">
-                            <img src="{% static 'assets/img/aa.jpg' %}" class="card-img-top" alt="...">
+                            <img src="{% static 'assets/img/bag25.jpg' %}" class="card-img-top" alt="...">
+                        </a>
+                        <div class="card-body">
+                            <ul class="list-unstyled d-flex justify-content-between">
+                                <li>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-muted fa fa-star"></i>
+                                    <i class="text-muted fa fa-star"></i>
+                                </li>
+                                <li class="text-muted text-right">$240.00</li>
+                            </ul>
+                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Gym Weight</a>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa qui officia deserunt.
+                            </p>
+                            <p class="text-muted">Reviews (24)</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card h-100">
+                        <a href="shop-single.html">
+                            <img src="{% static 'assets/img/bag24.jpg' %}" class="card-img-top" alt="...">
                         </a>
                         <div class="card-body">
                             <ul class="list-unstyled d-flex justify-content-between">
@@ -804,34 +990,7 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="col-12 col-md-4 mb-4">
                     <div class="card h-100">
                         <a href="shop-single.html">
-                            <img src="{% static 'assets/img/aa.jpg' %}" class="card-img-top" alt="...">
-                        </a>
-                        <div class="card-body">
-                            <ul class="list-unstyled d-flex justify-content-between">
-                                <li>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-muted fa fa-star"></i>
-                                    <i class="text-muted fa fa-star"></i>
-                                </li>
-                                <li class="text-muted text-right">$240.00</li>
-                            </ul>
-                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Gym Weight</a>
-                            <p class="card-text">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa qui officia deserunt.
-                            </p>
-                            <p class="text-muted">Reviews (24)</p>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <div class="col-12 col-md-4 mb-4">
-                    <div class="card h-100">
-                        <a href="shop-single.html">
-                            <img src="{% static 'assets/img/aa.jpg' %}" class="card-img-top" alt="...">
+                            <img src="{% static 'assets/img/bag25.jpg' %}" class="card-img-top" alt="...">
                         </a>
                         <div class="card-body">
                             <ul class="list-unstyled d-flex justify-content-between">
@@ -859,7 +1018,34 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="col-12 col-md-4 mb-4">
                     <div class="card h-100">
                         <a href="shop-single.html">
-                            <img src="{% static 'assets/img/aa.jpg' %}" class="card-img-top" alt="...">
+                            <img src="{% static 'assets/img/bag24.jpg' %}" class="card-img-top" alt="...">
+                        </a>
+                        <div class="card-body">
+                            <ul class="list-unstyled d-flex justify-content-between">
+                                <li>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-muted fa fa-star"></i>
+                                    <i class="text-muted fa fa-star"></i>
+                                </li>
+                                <li class="text-muted text-right">$240.00</li>
+                            </ul>
+                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Gym Weight</a>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa qui officia deserunt.
+                            </p>
+                            <p class="text-muted">Reviews (24)</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card h-100">
+                        <a href="shop-single.html">
+                            <img src="{% static 'assets/img/bag25.jpg' %}" class="card-img-top" alt="...">
                         </a>
                         <div class="card-body">
                             <ul class="list-unstyled d-flex justify-content-between">
@@ -887,7 +1073,35 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="col-12 col-md-4 mb-4">
                     <div class="card h-100">
                         <a href="shop-single.html">
-                            <img src="{% static 'assets/img/aa.jpg' %}" class="card-img-top" alt="...">
+                            <img src="{% static 'assets/img/bag24.jpg' %}" class="card-img-top" alt="...">
+                        </a>
+                        <div class="card-body">
+                            <ul class="list-unstyled d-flex justify-content-between">
+                                <li>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-muted fa fa-star"></i>
+                                    <i class="text-muted fa fa-star"></i>
+                                </li>
+                                <li class="text-muted text-right">$240.00</li>
+                            </ul>
+                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Gym Weight</a>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa qui officia deserunt.
+                            </p>
+                            <p class="text-muted">Reviews (24)</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card h-100">
+                        <a href="shop-single.html">
+                            <img src="{% static 'assets/img/bag25.jpg' %}" class="card-img-top" alt="...">
                         </a>
                         <div class="card-body">
                             <ul class="list-unstyled d-flex justify-content-between">
@@ -914,7 +1128,7 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="col-12 col-md-4 mb-4">
                     <div class="card h-100">
                         <a href="shop-single.html">
-                            <img src="{% static 'assets/img/aa.jpg' %}" class="card-img-top" alt="...">
+                            <img src="{% static 'assets/img/bag24.jpg' %}" class="card-img-top" alt="...">
                         </a>
                         <div class="card-body">
                             <ul class="list-unstyled d-flex justify-content-between">
@@ -941,7 +1155,7 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="col-12 col-md-4 mb-4">
                     <div class="card h-100">
                         <a href="shop-single.html">
-                            <img src="{% static 'assets/img/aa.jpg' %}" class="card-img-top" alt="...">
+                            <img src="{% static 'assets/img/bag25.jpg' %}" class="card-img-top" alt="...">
                         </a>
                         <div class="card-body">
                             <ul class="list-unstyled d-flex justify-content-between">
@@ -968,7 +1182,7 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="col-12 col-md-4 mb-4">
                     <div class="card h-100">
                         <a href="shop-single.html">
-                            <img src="{% static 'assets/img/aa.jpg' %}" class="card-img-top" alt="...">
+                            <img src="{% static 'assets/img/bag24.jpg' %}" class="card-img-top" alt="...">
                         </a>
                         <div class="card-body">
                             <ul class="list-unstyled d-flex justify-content-between">
@@ -997,7 +1211,7 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="col-12 col-md-4 mb-4">
                     <div class="card h-100">
                         <a href="shop-single.html">
-                            <img src="{% static 'assets/img/aa.jpg' %}" class="card-img-top" alt="...">
+                            <img src="{% static 'assets/img/bag25.jpg' %}" class="card-img-top" alt="...">
                         </a>
                         <div class="card-body">
                             <ul class="list-unstyled d-flex justify-content-between">
@@ -1210,15 +1424,60 @@ https://templatemo.com/tm-559-zay-shop
 
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- End Featured Product -->
 
-
+ 
 
 
       </section>
       <!-- <section> close ============================-->
       <!-- ============================================-->
+    
+                
+    <!-- Start Categories of The Month -->
+    <section class="container py-5">
+        
+        <div class="row text-center pt-3">
+            <!--<div class="col-lg-6 m-auto">
+                <h1 class="h1">CATEGORIES </h1>
+                <p>
+                    Find All Your Favourites Brands For Bags And LUGGAGE
+                </p>
+            </div>-->
+        </div>
+        
+        <div class="row">
+            <div class="col-12 col-md-4 p-5 mt-3">
+                <a href="#"><img src="{% static 'assets/img/ac.jpg' %}" class="rounded-circle img-fluid border"></a>
+                <h5 class="text-center mt-3 mb-3">KIDS</h5>
+                <p class="text-center"><a class="btn btn-success">Go Shop</a></p>
+                <p>Discover our delightful collection of kids bags designed to add a playful touch to their everyday adventures. These bags are not only adorable but also functional, perfect for carrying their school essentials, toys, or snacks.
+                     With vibrant colors and cute designs, these bags are sure to bring smiles to your little ones' faces.
+                                        
+                </p>
+            </div>
+            <div class="col-12 col-md-4 p-5 mt-3">
+                <a href="#"><img src="{% static 'assets/img/b.jpg' %}" class="rounded-circle img-fluid border"></a>
+                <h2 class="h5 text-center mt-3 mb-3">WOMEN</h2>
+                <p class="text-center"><a class="btn btn-success">Go Shop</a></p>
+                <p> Elevate your style with our exquisite range of women's bags. From elegant handbags to chic totes, our collection is designed to complement every outfit and occasion. Crafted with attention to detail and featuring a variety of colors and textures,
+                     our women's bags are the perfect blend of fashion and functionality.
+                                        
+                </p>
+            </div>
+            <div class="col-12 col-md-4 p-5 mt-3">
+                <a href="#"><img src="{% static 'assets/img/a.jpg' %}" class="rounded-circle img-fluid border"></a>
+                <h2 class="h5 text-center mt-3 mb-3">MEN</h2>
+                <p class="text-center"><a class="btn btn-success">Go Shop</a></p>
+                <p> Explore our sophisticated collection of men's bags that cater to the modern gentleman's needs. Whether you're heading to the office, going on a weekend getaway, or hitting the gym, we have a bag to suit your lifestyle. With sturdy materials and sleek designs,
+                     our men's bags offer both style and durability.
+                                        
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- End Categories of The Month -->
 
 
        <!-- ======= Clients Section ======= -->

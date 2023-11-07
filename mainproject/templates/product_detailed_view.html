@@ -1,0 +1,195 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="product">
+        <div class="product">
+            <div class="product-images">
+                <a href="{{product.image1.url}}" data-lightbox="product-gallery">
+                    <img class="main-image" src="{{product.image1.url}}" alt="Bag Image">
+                </a>
+                <div class="image-thumbnails">
+                    <a href="{{product.image2.url}}" data-lightbox="product-gallery">
+                        <img src="{{product.image2.url}}" alt="Thumbnail 1">
+                    </a>
+                    <a href="{{product.image3.url}}" data-lightbox="product-gallery">
+                        <img src="{{product.image3.url}}" alt="Thumbnail 2">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+                
+        <div class="product-info">
+            <h1 class="product-title">{{product.product_name}}</h1>
+            <p class="product-price">₹ {{product.current_price}}</p>
+            <p class="product-rating">Rating: <span class="stars">★★★★★</span></p>
+            <p class="product-description">{{product.about_product}}</p>
+            <p class="product-capacity">Capacity:{{product.capacity}}</p>
+            <p class="product-color">Color: {{product.color}}</p>
+            <p class="product-material">Material: {{product.material}}</p>
+            <div class="action-buttons">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="wishlist-button">Add to Wishlist</button>
+                <button class="buy-now-button">Buy Now</button>
+            </div>
+            
+        </div>
+        
+    </div>
+   
+    <div class="action-buttons">
+        <a href="/myauth/home/"> <!-- Add your desired URL in the href attribute -->
+            <button class="add-to-cart">Back</button>
+        </a>
+    </div>
+    
+</body>
+</html>
+
+
+
+
+<style>
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.product {
+    display: flex;
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.product-images {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-image {
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.image-thumbnails {
+    display: flex;
+}
+
+.image-thumbnails img {
+    max-width: 50px;
+    height: auto;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.product-info {
+    flex: 1;
+}
+
+.product-title {
+    font-size: 24px;
+    margin: 0;
+    color: #333;
+}
+
+.product-price {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #ff6600;
+}
+
+.product-rating {
+    color: #666;
+}
+
+.stars {
+    color: #ffcc00;
+}
+
+.product-description,
+.product-capacity,
+.product-color,
+.product-material {
+    color: #666;
+}
+
+.action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.add-to-cart,
+.wishlist-button,
+.buy-now-button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:hover,
+.wishlist-button:hover,
+.buy-now-button:hover {
+    background-color: #21b721;
+}
+
+
+
+
+
+
+
+
+/* Add this to your existing CSS */
+.image-thumbnails img:hover {
+    max-width: 100px; /* Increase the maximum width on hover */
+    height: auto;
+    transition: max-width 0.3s; /* Add a smooth transition effect */
+}
+/* Modify the existing image-thumbnails CSS */
+.image-thumbnails {
+    display: flex;
+}
+
+.image-thumbnails img {
+    max-width: 50px;
+    height: auto;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: max-width 0.3s; /* Add a smooth transition effect */
+}
+
+/* Add this CSS for the hover effect */
+.image-thumbnails img:hover {
+    max-width: 100px;
+    margin-right: 0; /* Remove margin on hover */
+    cursor: zoom-in; /* Change cursor to indicate zoom-in on hover */
+}
+
+  </style>
+
